@@ -20,6 +20,8 @@ import visuals1 as vs
 # %matplotlib inline
 
 # Load the Banknote Authentication dataset
+# The dataset required is 'Banknote Authentication' from UCI Machine Learning Repository
+# (https://archive.ics.uci.edu/ml/datasets/banknote+authentication)
 data = pd.read_csv('banknote_authentication.csv')
 display(data.head(n=6))
 
@@ -68,6 +70,8 @@ fscore = (1 + beta ** 2) * precision * recall /(beta ** 2 * precision + recall)
 print ("Naive Predictor: [Accuracy score: {:.4f}, F-score: {:.4f}]".format(accuracy, fscore))
 
 # Import two metrics from sklearn - fbeta_score and accuracy_score
+# Portions of this project include code developed by dudeanurag
+# github account : https://github.com/dudeanurag
 from sklearn.metrics import fbeta_score
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
